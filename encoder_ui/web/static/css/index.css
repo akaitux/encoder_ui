@@ -1,0 +1,127 @@
+#containers_table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#containers_table tr {
+    text-align: center; 
+}
+
+#containers_table tr:nth-child(2) {
+    vertical-align: middle;
+    background: #ffffff ;
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+
+#containers_table tr:first-child{
+    background:rgb(57, 170, 161);
+    color: #fff;
+}
+
+#containers_table tr th {
+    padding: 10px;
+}
+
+#containers_table tr td {
+    text-align: center;
+    padding: 12px 5px;
+    font-size: 1em;
+}
+
+#containers_table_footer {
+    width: 100%;
+    text-align: right;
+}
+
+#updated_at {
+    text-align: right;
+}
+
+
+.green_status {
+    background: rgb(135, 243, 184);
+}
+
+.red_status {
+    background: rgb(228, 118, 118);
+}
+
+.popup_docker_logs, .popup_docker_cmd {
+    display:none;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    z-index: 1000;
+    width: 80%;
+    margin: 20px auto 20px auto;
+    background-color: #fff;
+    padding: 10px 20px; 
+    overflow: auto;
+    max-height: 90%;
+
+}
+
+.overlay_popup {
+    display:none;
+    position:fixed;
+    z-index: 999;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background:#000;
+    opacity:0.5;
+  }
+
+
+.ffmpeg_logs_link {
+    text-decoration: none;
+    color: rgb(33, 122, 33);
+}
+
+.ffmpeg_logs_link:active {
+    color: rgb(33, 122, 33);
+}
+
+.ffmpeg_logs_link:hover {
+    color: rgb(118, 223, 118);
+}
+
+.docker_cmd_link {
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.cpu_usage {
+    width: 30px;
+}
+
+/* .gpu_usage {
+    width: 10px;
+} */
+
+.up {
+    width: 15px;
+}
+
+.container_state {
+    width: 5px;
+}
+
+.restart_count {
+    width: 7px;
+}
+
+.docker_logs_button_td {
+    width: 15px;
+} 
+
+.ffmpeg_logs_td {
+    width: 15px;
+}
+
+.is_ff_wrapper_td {
+    width: 15px;
+}

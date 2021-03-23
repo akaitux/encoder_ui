@@ -1,0 +1,106 @@
+#wrapper {
+  padding-bottom: 50px;
+}
+
+#ffprobe_info_wrapper {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+/* #error {
+  font-size: 1.05em;
+} */
+
+#address_input {
+  height: 40px;
+  width: 550px;
+  margin-right: 20px;
+}
+
+#address_btn {
+  height: 40px;
+  width: 80px;
+  background-color: #82c7b6;
+  border-radius: 4px;
+  border: 0px;
+  cursor: pointer;
+}
+
+#address_btn:disabled {
+  height: 40px;
+  width: 80px;
+  background-color: #c9c9c9;
+  cursor: not-allowed;
+  pointer-events: none;
+  border-radius: 4px;
+  border: 0px;
+}
+
+.program_describe {
+  margin-left: 40px;
+}
+
+.program:nth-child(1n+1) {
+  margin-top: 70px;
+}
+
+.program_streams {
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.program_streams .stream {
+  margin-left: 40px;
+}
+
+.stream {
+  margin-top: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 400px;
+
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+tr:hover {background-color: #ddd;}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table_video_stream tr:nth-child(even) {
+  background-color: #dfe9f3;
+}
+
+.table_audio_stream tr:nth-child(even) {
+  background-color: #e2f3df;
+}
+
+
+#standalone_streams_div {
+  margin-top: 30px;
+}
+
+#source {
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+}
+
+#help p {
+  font-size: 0.9em !important;
+}
+
+#help h2 {
+  margin-bottom: 10px;
+}
+
+#help {
+  margin-bottom: 20px;
+}

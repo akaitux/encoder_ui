@@ -1,0 +1,7 @@
+flask==1.1.2
+gunicorn==20.0.4
+redis==3.5.3
+celery==4.4.7
+docker==4.3.1
+requests==2.24.0
+git+https://github.com/hidnoiz/ff_presets.git

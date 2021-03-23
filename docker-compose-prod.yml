@@ -1,0 +1,41 @@
+version: "3.4"
+
+services:
+  nginx:
+    image: "{{registry_image}}/nginx:{{tag | default('latest')}}"
+    depends_on: 
+      - "flask"
+    ports:
+      - "0.0.0.0:8000:80"
+    restart: always
+  flask:
+    image: "{{registry_image}}/flask:{{tag | default('latest')}}"
+    depends_on:
+      - redis
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/log/ffmpeg/:/var/log/ffmpeg
+    restart: always
+  worker:
+    image: "{{registry_image}}/worker:{{tag | default('latest')}}"
+    depends_on:
+    build:
+      context: "."
+      args:
+        - "FLASK_ENV=${FLASK_ENV:-production}"
+    command: celery worker -B -l info -A encoder_ui.celery.tasks -c 1 --loglevel=warning
+    depends_on:
+      - "redis"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/nvidia_stats:/var/run/nvidia_stats
+      - /etc/localtime:/etc/localtime:ro
+    restart: always
+  redis:
+    image: redis:6.0.8-alpine
+    volumes:
+      - "redis:/data"
+    restart: always
+
+volumes:
+  redis: {}

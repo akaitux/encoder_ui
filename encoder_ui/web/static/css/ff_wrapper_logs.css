@@ -1,0 +1,59 @@
+#wrapper {
+    width: 90%;
+}
+
+table {
+    width: 50%;
+    margin: 0 25% 50px 25%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;/* even columns width , fix width of table too*/
+}
+
+tbody {
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 600px;
+}
+
+table thead tr {
+    background:rgb(86, 185, 66);
+    color: #fff;
+}
+
+tbody tr {
+    text-align: center; 
+    vertical-align: middle;
+    background: #ffffff ;
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+table tr th {
+    padding: 10px;
+}
+
+table tr td {
+    padding: 12px 15px;
+}
+
+.table_header {
+    text-align: center;
+}
+
+.file_link {
+    color: rgb(32, 117, 53) ;
+}
+
+.file_link:active {
+    color: rgb(32, 117, 53) ;
+  }
+
+.file_link:hover {
+    color: rgb(51, 197, 88) ;
+}

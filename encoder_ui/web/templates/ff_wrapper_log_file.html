@@ -1,0 +1,26 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/css/ff_wrapper_log_file.css">
+        <title>EncoderUI</title>
+    </head>
+    <body>
+        <div id="header">
+            <a class="header_link" href="/">Containers</a>
+            <a class="header_link"  href="/ffprobe/">FFProbe</a>
+            <a class="header_link"  id="self_logs" href="/">Log files</a>
+            <a class="header_link header_active" id="self_link" href="/">File</a>
+        </div>
+        <div id="wrapper">
+            <p id="error"></p>
+            <div id="file_source"></div>
+        </div>
+        <div class="btnBar">
+            <button class="btn btnScroll" onclick="btnScrollBottomBind()" id="btnScroll" title="Scroll">Bottom</button> 
+            <button class="btn btnUpdate" onclick="getLog()" id="btnUpdate" title="Update">Update</button> 
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <script src="/js/ff_wrapper_log_file.js"></script> 
+    </body>
+</html>

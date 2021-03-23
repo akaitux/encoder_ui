@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/css/ffprobe.css">
+        <title>EncoderUI</title>
+    </head>
+    <body>
+        <div id="header">
+            <a class="header_link" href="/">Containers</a>
+            <a class="header_active header_link" href="/ffprobe/">FFProbe</a>
+        </div>
+        <div id="wrapper">
+            <div id="help">
+                <h2>Example:</h2>
+                <p>http://astra.zxz.su:8008/1728</p>
+                <p>http://astra.zxz.su:41728/1728</p>
+                <p>http://sb-origin-live-101.dl.zxz.su:8080/live/flashline1_4/chunklist.m3u8</p>
+                <p>http://sb-origin-live-101.dl.zxz.su:8080/live/flashline1.m3u8</p>
+                <p>http://wow-101.dl.sportbox.ru:1935/live/133529_3/chunklist.m3u8</p>
+            </div>
+            <p id="error"></p>
+            <div id="address_bar">
+                <input id="address_input" type=text>
+                <button id="address_btn" onclick="onclickFFProbe()">run</button>
+            </div>
+            <div id="ffprobe_info_wrapper">
+            </div>
+            <button hidden="true" id="show_source" onclick="toggleSource()">Show source</button>
+            <div hidden="true" id="source">
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <script src="/js/ffprobe.js"></script> 
+    </body>
+</html>

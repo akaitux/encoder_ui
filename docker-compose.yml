@@ -1,0 +1,39 @@
+version: "3.4"
+
+services:
+  nginx:
+    build:
+      context: nginx/
+    depends_on: 
+      - "flask"
+    ports:
+      - "0.0.0.0:8001:80"
+  flask:
+    build:
+      context: "."
+      dockerfile: DockerfileDev
+    depends_on:
+      - redis
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/log/ffmpeg/:/var/log/ffmpeg
+  worker:
+    build:
+      context: "."
+      dockerfile: DockerfileDev
+      args:
+        - "FLASK_ENV=${FLASK_ENV:-production}"
+    command: celery worker -B -l info -A encoder_ui.celery.tasks -c 1 --loglevel=warning
+    depends_on:
+      - "redis"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/nvidia_stats:/var/run/nvidia_stats
+      - /etc/localtime:/etc/localtime:ro
+  redis:
+    image: redis:6.0.8-alpine
+    volumes:
+      - "redis:/data"
+
+volumes:
+  redis: {}

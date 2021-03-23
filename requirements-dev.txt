@@ -1,0 +1,2 @@
+pytest
+git+https://github.com/hidnoiz/ff_presets.git@dev

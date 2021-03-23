@@ -1,0 +1,1 @@
+from encoder_ui.api.views import app as blueprint_api

@@ -1,0 +1,19 @@
+import os
+
+
+SECRET_KEY = os.getenv('SECRET_KEY', None)
+
+SERVER_NAME = 'flask:8001'
+
+_REDIS_HOST = "redis"
+_REDIS_PORT = '6379'
+REDIS_ADDITIONAL = {'host': _REDIS_HOST, 'port': _REDIS_PORT, 'db': 1}
+
+CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL', 'redis://{}:{}/0'.format(_REDIS_HOST, _REDIS_PORT))
+CELERY_RESULT_BACKEND = CELERY_BROKER_URL
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_REDIS_MAX_CONNECTIONS = 5
+
+LOGS_PATH = '/var/log/ffmpeg/'

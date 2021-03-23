@@ -1,0 +1,51 @@
+#file_source {
+    overflow: auto;
+    height: 87%;
+    padding: 10px;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1%;
+}
+
+.btnBar {
+    position: absolute;
+    bottom: 3%;
+    right:3%;
+}
+
+.btn {
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    cursor: pointer; 
+    padding: 15px; 
+    font-size: 17px;
+    width: 100px;
+  }
+
+.btnScroll {
+  background-color: rgb(179, 229, 245); 
+  color: rgb(59, 59, 59); 
+
+}
+
+  
+.btnScroll:hover {
+    background-color: rgb(131, 211, 238);
+  }
+
+.btnUpdate {
+  background-color: rgb(209, 245, 179); 
+  color: rgb(59, 59, 59); 
+}
+
+.btnUpdate:hover {
+    background-color: rgb(173, 235, 123); 
+}
+
+.btnUpdate:disabled {
+  background-color: rgb(146, 146, 146); 
+  color: rgb(27, 27, 27); 
+  cursor: not-allowed;
+  pointer-events: none;
+}

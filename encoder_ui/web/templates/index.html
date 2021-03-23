@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/css/index.css">
+        <title>EncoderUI</title>
+    </head>
+    <body>
+        <div class="overlay_popup"></div>
+        <div id="popup_logs"></div>
+        <div id="popup_cmd"></div>
+        <div id="popup_resources"></div>
+        <div id="header">
+            <a class="header_active header_link" href="/">Containers</a>
+            <a class="header_link" href="/ffprobe/">FFProbe</a>
+            <a id='header_right_link'> <div id="header_right"></div></a>
+        </div>
+        <div id="wrapper">
+            <table id="containers_table">
+                <tr>
+                    <th>container name</th>
+                    <th>id</th>
+                    <th>image</th>
+                    <th>status</th>
+                    <th>ff_wrapper</th>
+                    <th>restart count</th>
+                    <th class="up">up</th>
+                    <th class="cpu_usage">cpu</th>
+                    <th class="gpu_usage">gpu(enc|dec|mem)</th>
+                    <th>docker logs</th>
+                    <th>ffmpeg logs</th>
+                </tr>
+            </table>
+            <div id="containers_table_footer">
+                <p id="updated_at"></p>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <script src="/js/index.js"></script> 
+    </body>
+</html>
